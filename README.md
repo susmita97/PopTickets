@@ -5,6 +5,7 @@ PopTickets is an effort in decentralizing platforms for artists or their managem
 Dependencies :
 
 npm install express --save <br />
+npm install axios <br />
 npm install ganache --global <br />
 
 Components/Tech Stack:
