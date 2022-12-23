@@ -4,5 +4,10 @@ PopTickets is an effort in decentralizing platforms for artists or their managem
 
 Dependencies :
 
-npm install express --save
-npm install ganache --global
+npm install express --save <br />
+npm install ganache --global <br />
+
+Components/Tech Stack:
+
+PopTickets is implemented with HTML, MaterializeCSS, JS for the frontend, Node.js and Express for the backend, Ether.js for interacting with the Ethereum blockchain and Solidity for smart contracts. Remix IDE and Ganache client were used for development and testing. Pinata API service for connecting to the IPFS network and OpenZeppelin smart contracts which include ERC721 and it’s extension contracts
+used in the app.
