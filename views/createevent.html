@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Importing css styles -->
+    <!--<link rel="stylesheet" href="static/index.css" />-->
+	<!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+       <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	
+    <title>PopTickets</title>
+  </head>
+  <body>
+  
+  <nav class="transparent">
+    <div class="nav-wrapper teal lighten-2">
+     <a href="#" class="brand-logo">PopTickets</a>
+	<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+     <ul id ="nav-mobile" class="right hide-on-med-and-down">
+
+       <li><a href="index.html">Home</a></li>
+       <li><a href="createevent.html">Add Your Event</a></li>
+       <li><a href="listevents.html">Current Events</a></li>
+	   <li><a href="#">Connect to Wallet</a></li>
+       
+     </ul>
+	</div>
+    </nav>
+	 
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="createevent.html">Add Your Event</a></li>
+	  <li><a href="listevents.html">Current Events</a></li>
+	  <li><a href="#">Connect to Wallet</a></li>
+	</ul>
+  
+    <section class="event-form-section" id = "eventform">
+      <section class="section-header center">
+        <h1>Event Form</h1>
+      </section>
+      <!-- Form -->
+	  <div class = "row">
+      <form class="col m8 offset-m2 s12">
+	  <div class = "row">
+	  <div class="input-field col s12">
+        <input type="text" id="event-name" class="validate">
+		<label for="event-name" class="black-text active">Event Name</label>
+	  </div>
+	  <div class="input-field col s12">
+        <input type="text" id="event-venue" class="validate">
+		<label for="event-venue" class="black-text active">Venue</label>
+	  </div>
+	  <div class="input-field col s12">
+        <input type="text" id="description" class="validate">
+		<label for="description" class="black-text active">Description</label>
+	  </div>
+	  <div class="input-field col s12">
+        <input type="text" id="start-date" class="datepicker validate">
+		<label for="start-date" class="black-text active">Start Date</label>
+	  </div>
+	  <div class="input-field col s12">
+	    <input type="text" id="end-date" class="datepicker validate">
+		<label for="end-date" class="black-text active">End Date</label>
+        
+	  </div>
+	  <div class="input-field col s12">
+        <input type="text" id="duration" class="validate">
+		<label for="duration" class="black-text active">Duration</label>
+	  </div>
+	  <div class="input-field col s12">
+        <input type="text" id="price" class="validate">
+		<label for="price" class="black-text active">Ticket Price</label>
+	  </div>
+	  <div class="input-field col s12">
+        <input type="text" id="capacity" class="validate">
+		<label for="capacity" class="black-text active">Capacity of Venue/Total Tickets</label>
+	  </div>
+	  
+	  <div class = "row">
+            <label>Upload an Image</label>
+               <div class = "file-field input-field">
+                  <div class = "btn">
+                     <span>Browse</span>
+                     <input type = "file" accept = "image/*" id = "file" />
+                  </div>
+                  
+                  <div class = "file-path-wrapper">
+                     <input class = "file-path validate" type = "text"
+                        placeholder = "Upload file" />
+                  </div>
+               </div>
+      </div>
+            
+	  <div class="row">
+	  <div class="col m12">
+        <p class="right-align"><input class="btn btn-large waves-effect waves-light center" type="button" value="Submit" id="set-new-event" /></p>
+	  </div>
+	  </div>
+      </form>
+	  </div>
+	  </div>
+    </section>
+
+    <!-- Pet details section -->
+	<div class= "row col m8 offset-m2 s12">
+    <section class="event-detail-section center" id = "getdetail">
+      <section class="section-header">
+        <h1>Event Details</h1>
+      </section>
+      <section class="event-details col s12">
+        <h3 class="event-detail-heading">
+          Event Name:
+          <span class="event-data event-detail-name"></span>
+        </h3>
+        <h3 class="event-detail-heading">
+          Event Venue:
+          <span class="event-data event-detail-venue"></span>
+        </h3>
+        <h3 class="event-detail-heading">
+          Description:
+          <span class="event-data event-detail-description"></span>
+        </h3>
+		<h3 class="event-detail-heading">
+          Start Date:
+          <span class="event-data event-detail-start-date"></span>
+        </h3>
+		<h3 class="event-detail-heading">
+          End Date:
+          <span class="event-data event-detail-end-date"></span>
+        </h3>
+		<h3 class="event-detail-heading">
+          Duration:
+          <span class="event-data event-detail-duration"></span>
+        </h3>
+		<h3 class="event-detail-heading">
+          Ticket Price:
+          <span class="event-data event-detail-price"></span>
+        </h3>
+		<h3 class="event-detail-heading">
+          Capacity of Venue/Total Tickets:
+          <span class="event-data event-detail-capacity"></span>
+        </h3>
+      </section>
+      <section class="section-footer center">
+        <button class="show-event-form-btn btn btn-large waves-effect waves-light center">Set New Event</button>
+        <button class="refresh-event-details-btn btn btn-large waves-effect waves-light center">Refresh</button>
+      </section>
+    </section>
+	</div>
+	
+	<footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l4 s12">
+          <h5 class="white-text center-align">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job.</p>
+
+
+        </div>
+        
+		<div class="col l4 s12">
+          <h5 class="white-text center-align">Contact Us</h5>
+          <ul>
+          <p class="center-align">Some Email Address. Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+		  </p>
+        </div>
+		
+        <div class="col l4 s12">
+          <h5 class="white-text center-align">Follow Us On</h5>
+          <ul class="center-align">
+            <li><a class="white-text" href="#!">Facebook</a></li>
+            <li><a class="white-text" href="#!">Twitter</a></li>
+            <li><a class="white-text" href="#!">Instagram</a></li>
+            <li><a class="white-text" href="#!">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3">(Copyrights)</a>
+      </div>
+    </div>
+  </footer>
+	
+	
+	
+    <!-- Importing Ethers.js script -->
+    <script
+      src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+      type="application/javascript"
+    ></script>
+
+    <!-- Importing our javascript file -->
+    <script src="static/createevent.js" type = "module"></script>
+	
+	<!--Import JQuery before materialize.js-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	
+      <!--JavaScript at end of body for optimized loading-->
+      <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+			$('.datepicker').datepicker();
+		});
+	</script>
+	
+  </body>
+</html>
